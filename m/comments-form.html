@@ -1,0 +1,67 @@
+<div id=D__ID>
+  <!--third html start -->
+  <div class="container mt-95 mb-3">
+    <div class="row">
+      <!-- form container start -->
+      <div class="col-12 col-lg-12 col-md-12 col-sm-12 mx-auto formbox">
+        <div class="row">
+          <div class="col-12">
+            <!-- form start -->
+            <form id="F__ID">
+              <h3 id=title__ID></h3>
+              <!-- participant part for all tsak forms -------------------->
+              <div id="participant_div__ID">
+                <div class="form-group">
+                    <fieldset class="subquestions">
+                        <label><span class="">First Name</span>
+                            <input type=text name="first_name" class=form-control readonly />
+                        </label><br>
+                        <label><span class="">Last Name</span>
+                          <input type=text name="last_name" class=form-control readonly />
+                      </label><br>
+                      <label><span class="">Mobile Number</span>
+                            <input type=text name="phone" class=form-control readonly />
+                        </label><br>
+                        <label><span class="">Email</span>
+                            <input type=text name="email" class=form-control readonly />
+                        </label>
+                    </fieldset>
+                </div>
+            </div>
+              <div class="form-group">
+                <h4>Comments </h4>
+                <div class="questiongroup ">
+                  <fieldset class="subquestions">
+                    <textarea style='width:100%' name="comments" class='form-control' ></textarea>
+                  </fieldset>
+                </div>
+              </div>
+              <button type="submit" id="submit__ID" class="btn btn-primary btn-lg">Submit</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script>
+    function F__ID() {
+      //-------------------------------------
+      VmInclude: '__COMPONENT__/f/form.01.js'
+      //-------------------------------------
+      var load2 = m.load;
+      m.load = function () {
+        load2();
+        $('#title__ID').text($vm.module_list[$vm.vm['__ID'].name].task_name);
+      }
+      //-------------------------------
+
+    }
+  </script>
+  <style>
+    #D__ID .mt-95 {
+      max-width: 600px;
+    }
+
+    VmInclude:__CURRENT_PATH__/wappsystem-form.css
+  </style>
+</div>
